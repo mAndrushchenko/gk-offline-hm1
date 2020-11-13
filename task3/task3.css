@@ -1,0 +1,334 @@
+body {
+    background: #cccccc;
+    height: 100%;
+    max-width: 1000px;
+    font-size: 19px;
+    margin: auto;
+}
+
+header {
+    display: grid;
+    grid-auto-rows: minmax(120px, 140px) ;
+    grid-auto-columns: minmax(120px, 140px);
+    grid-template-areas:
+    "b1 b2 b2 b3 b3 b3 b3";
+    grid-gap: 20px;
+    margin: 40px 20px;
+}
+
+main {
+    display: grid;
+    grid-auto-rows: minmax(140px, 150px) ;
+    grid-template-columns: 130px repeat(6, minmax(110px, 130px));
+    grid-template-areas:
+    "b4 b4 b5 b5 b5 b5 b5"
+    "b4 b4 b5 b5 b5 b5 b5"
+    "b4 b4 b61 b62 b63 b64 b65"
+    ".  . b66 b67 . . ."
+    "b7 b8 b8 b8 b9 b9 b9"
+    "b7 b8 b8 b8 b9 b9 b9";
+    grid-gap: 10px;
+    justify-content: center;
+    align-content: center;
+}
+
+footer {
+    display: grid;
+    grid-auto-rows: minmax(100px, 120px) ;
+    grid-template-columns: 140px 140px 150px 150px repeat(3, minmax(100px, 110px));
+    grid-template-areas:
+    "b10 b10 b11 b11 b12 b12 b12"
+    "b10 b10 b11 b11 b13 b13 b13";
+    grid-gap: 15px;
+    padding: 20px;
+}
+
+hr {
+    background-color: black;
+    margin: 30px 20px 30px 20px;
+}
+.list {
+    list-style-type: none;
+    padding-inline-start: 10px;
+    padding-inline-end: 10px;
+}
+
+.a1 {
+    grid-area: b1;
+    background-color: goldenrod;
+}
+
+.a2 {
+    grid-area: b2;
+    background-color: brown;
+}
+
+.a3 {
+    grid-area: b3;
+    background-color: blanchedalmond;
+    text-align: right;
+    padding: 10px;
+}
+
+.a4 {
+    justify-content: space-between;
+    grid-area: b4;
+    background-color: darkmagenta;
+    text-align: left;
+    text-justify: auto;
+    overflow: hidden;
+    padding-top: 10px;
+    margin-bottom: 90px;
+}
+
+.a5 {
+    grid-area: b5;
+    background-color: lightsalmon;
+    padding: 10px;
+}
+
+.a61 {
+    grid-area: b61;
+    background-color: darkgoldenrod;
+}
+
+.a62 {
+    grid-area: b62;
+    background-color: darkgoldenrod;
+
+}
+.a63 {
+    grid-area: b63;
+    background-color: darkgoldenrod;
+
+}
+.a64 {
+    grid-area: b64;
+    background-color: darkgoldenrod;
+
+}
+.a65 {
+    grid-area: b65;
+    background-color: darkgoldenrod;
+
+}
+.a66 {
+    grid-area: b66;
+    background-color: darkgoldenrod;
+
+}
+.a67 {
+    grid-area: b67;
+    background-color: darkgoldenrod;
+
+}
+.a7 {
+    grid-area: b7;
+    background-color: #C0D6DF;
+    margin-top: 120px;
+}
+
+.a8 {
+    grid-area: b8;
+    background-color: blue;
+    padding: 20px;
+}
+
+.a9 {
+    grid-area: b9;
+    background-color: steelblue;
+    padding: 20px;
+}
+
+.a10 {
+    grid-area: b10;
+    background-color: darkgoldenrod;
+    column-count: 2;
+    justify-content: stretch;
+    text-align: left;
+    padding: 20px;
+}
+
+.a11 {
+    grid-area: b11;
+    background-color: brown;
+    padding-bottom: 15px;
+}
+
+.squareli{
+    list-style-type: square;
+}
+
+.a12 {
+    grid-area: b12;
+    background-color: aquamarine;
+}
+
+.a13 {
+    grid-area: b13;
+    background-color: mediumslateblue;
+}
+
+@media (max-width: 840px) {
+    body {
+        height: 100%;
+        font-size: 13px;
+    }
+
+    header {
+        grid-auto-rows: minmax(100px, 150px);
+        grid-auto-columns: minmax(110px, 130px);
+        grid-template-areas:
+    "b1 b2 b2 b2"
+    "b3 b3 b3 b3";
+        grid-gap: 10px;
+        margin: 10px;
+        align-items: normal;
+        justify-content: center;
+    }
+
+    main {
+        grid-auto-rows: minmax(100px, 120px) ;
+        grid-template-columns: 110px minmax(115px, 120px) minmax(115px, 120px) minmax(115px, 120px)  ;
+        grid-template-areas:
+            "b4 b5 b5 b5"
+            "b4 b5 b5 b5"
+            "b4 b61 b62 b63"
+            " . b64 b65 b66"
+            " . b67 . . "
+            "b7 b8 b8 b8"
+            "b7 b9 b9 b9";
+        grid-gap: 10px;
+        align-items: normal;
+        justify-content: center;
+    }
+
+    .a4{
+        padding: 5px;
+        margin-bottom: -50px;
+    }
+    .a61, .a62, .a63, .a64, .a65, .a66, .a67 {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .a7 {
+        padding: 10px;
+        margin-top: 90px;
+    }
+
+    .a8 {
+        padding: 10px;
+        margin-bottom: -10px;
+    }
+
+    .a9 {
+        padding: 10px;
+        margin-top: 10px;
+    }
+
+    hr {
+        max-width: 560px;
+        background-color: black;
+        margin: 10px auto;
+    }
+
+    footer {
+        grid-template-rows: repeat(4, 75px) ;
+        grid-template-columns: minmax(120px, 150px) minmax(120px, 150px) minmax(120px, 150px) minmax(120px, 150px);
+        grid-template-areas:
+          "b10 b10 b11 b11"
+          "b10 b10 b11 b11"
+          "b12 b12 b12 b12"
+          "b13 b13 b13 b13";
+        grid-gap: 10px;
+        justify-content: center;
+    }
+
+    .a10, .a11 {
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 470px) {
+    body {
+        height: 100%;
+        font-size: 12px;
+    }
+
+    hr {
+        max-width: 470px;
+        background-color: black;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    header {
+        grid-auto-rows: minmax(100px, 120px) ;
+        grid-auto-columns: minmax(110px, 130px);
+        grid-template-areas:
+           "b1 b2 b2"
+           "b3 b3 b3";
+        grid-gap: 5px;
+        margin: 10px;
+        align-items: normal;
+        justify-content: center;
+    }
+
+    main {
+        grid-auto-rows: minmax(100px, 120px) ;
+        grid-template-columns: 120px minmax(100px, 120px) minmax(100px, 120px);
+        grid-template-areas:
+            "b5 b5 b5"
+            "b5 b5 b5"
+            "b4 b61 b62"
+            "b4 b63 b64"
+            "b4 b65 b66"
+            ".  b67 . "
+            "b7 b8 b8"
+            "b7 b9 b9";
+        grid-gap: 5px;
+        justify-content: center;
+    }
+
+    .a4{
+        padding: 5px;
+        margin-bottom: 40px;
+    }
+    .a61, .a62, .a63, .a64, .a65, .a66, .a67 {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .a8 {
+        padding: 5px;
+        margin-bottom: -30px;
+    }
+
+    .a9 {
+        padding: 5px;
+        margin-top: 30px;
+    }
+
+    .a10 {
+        grid-area: b10;
+        background-color: darkgoldenrod;
+        display: inline;
+        column-count: 2;
+        justify-content: stretch;
+        text-align: left;
+        padding: 5px;
+        height: content-box;
+    }
+    footer {
+        grid-template-rows: repeat(4, 75px) ;
+        grid-template-columns: minmax(170px, 180px) minmax(170px, 180px);
+        grid-template-areas:
+          "b10 b11"
+          "b10 b11"
+          "b12 b12"
+          "b13 b13";
+        grid-gap: 5px;
+        justify-content: center;
+    }
+}

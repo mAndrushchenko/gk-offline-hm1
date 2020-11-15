@@ -8,7 +8,7 @@ function waterCounter (arr) {
 
     arr.reduce((a,b) => a - b < 0 ? max = b : max); //finding the top of the mountain
 
-    let ar1 = arr.slice(0, arr.indexOf(max)+1);     //
+    let ar1 = arr.slice(0, arr.indexOf(max)+1);
     let ar2 = arr.slice(arr.indexOf(max)).reverse();
 
     function counter (sliceArr) {

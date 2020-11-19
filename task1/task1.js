@@ -12,10 +12,10 @@
             let sum = 0;
             for (let i = 0; i < arr.length; i++) {
                 if (typeof arr[i] === 'number' && !isNaN(arr[i])) {
-                    sum = sum + arr[i]
+                    sum = sum + arr[i];
                 }
             }
-            return `Sum of array is: ${sum}`
+            return `Sum of array is: ${sum}`;
         }
 
         function max (arr) {
@@ -24,13 +24,11 @@
             let max = arr[0];           // accepting any first value from the array
 
             for (let i = 0; i < arr.length; i++) {
-                for (let j = 0; j < arr.length; j++) {
-                    if (arr[i] > arr[j] && typeof arr[i] === 'number' && arr[i] > max) {
-                        max = arr[i]
-                    }
+                    if (arr[i] > max && typeof arr[i] === 'number' ) {
+                        max = arr[i];
                 }
             }
-            return `Max value of array is: ${max}`
+            return `Max value of array is: ${max}`;
         }
 
         function min (arr) {
@@ -38,14 +36,12 @@
 
             let min = arr[0];           // accepting any first value from the array
 
-            for (let i = 0; i < arr.length; i++) {
-                for (let j = 0; j < arr.length; j++) {
-                    if (arr[i] < arr[j] && typeof arr[i] === 'number' && arr[i] < min) {
-                        min = arr[i]
+                for (let i = 0; i < arr.length; i++) {
+                    if (arr[i] < min && typeof arr[i] === 'number') {
+                        min = arr[i];
                     }
-                }
             }
-            return `Min value of array is: ${min}`
+            return `Min value of array is: ${min}`;
         }
 
 
